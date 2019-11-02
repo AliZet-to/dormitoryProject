@@ -1,0 +1,20 @@
+{% extends 'RoomsList/base_template.html' %}
+
+
+{% block content %}
+<section class="line">
+    <h5 class="item_head_line">Num room</h5>
+    <h5 class="item_head_line">Num build</h5>
+    <h5 class="item_head_line">Count places</h5>
+    <h5 class="item_head_line">Count resident</h5>
+</section>
+{% for item in rooms %}
+<section class="line">
+    <div class="item_line">{{ item.num_room }}</div>
+    <div class="item_line">{{ item.num_build }}</div>
+    <div class="item_line">{{ item.count_places }}</div>
+    <div class="item_line">{{ item.count_resident }}</div>
+</section>
+{% endfor %}
+{% endblock %}
+
